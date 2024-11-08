@@ -1,8 +1,9 @@
-require_relative"reader.rb"
-require_relative"book.rb"
-require_relative"author.rb"
-require_relative"order.rb"
-require_relative"library.rb"
+require_relative"entities/reader.rb"
+require_relative"entities/book.rb"
+require_relative"entities/author.rb"
+require_relative"entities/order.rb"
+require_relative"entities/library.rb"
+require_relative"errors/errors_catcher.rb"
 
 reader1 = Reader.new("Anton", "email.com","Plauen","Hiaanstrasse","9")
 reader2 = Reader.new("Ivan", "email.com","Plauen","Gogolestrasse","9")
@@ -26,5 +27,6 @@ library = Library.new()
 library.add(order1)
 library.add(order2)
 library.add(order3)
+library.add(order4)
 
 puts library
