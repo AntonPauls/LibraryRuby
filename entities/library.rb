@@ -1,7 +1,12 @@
-
+require_relative"/home/antonpauls/RUBYLessons/createProject/Library/module/tools.rb"
+require_relative"/home/antonpauls/RUBYLessons/createProject/Library/errors/errors_catcher.rb"
 
 class Library
     attr_accessor :books, :orders, :readers, :authors
+    
+    include ErrorsCatcher
+    include Statistics
+
     def initialize()
         @books = []
         @orders = []
@@ -22,4 +27,10 @@ class Library
     def to_s
         "#{@orders}"
     end
+
+    def the_best_reader()
+        theBestReader(@orders, @readers)
+    end
+
+
 end
