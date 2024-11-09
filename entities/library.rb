@@ -1,11 +1,13 @@
-require_relative"/home/antonpauls/RUBYLessons/createProject/Library/module/tools.rb"
-require_relative"/home/antonpauls/RUBYLessons/createProject/Library/errors/errors_catcher.rb"
+require_relative "../module/tools.rb"
+require_relative "../errors/errors_catcher.rb"
 
 class Library
-    attr_accessor :books, :orders, :readers, :authors
-    
+
     include ErrorsCatcher
     include Statistics
+
+    attr_accessor :books, :orders, :readers, :authors
+
 
     def initialize()
         @books = []
