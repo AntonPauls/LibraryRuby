@@ -31,7 +31,11 @@ class Library
     end
 
     def the_most_popular_book()
-        theMostPopularBook(@orders, @books)
+        theMostPopularBook(@orders)
+    end
+
+    def countOfPeopleOnTheBestBook()
+        oneOfTheThirdTheBestBooks(@orders)
     end
 
     def writeLibraryDataWithYaml(library)

@@ -30,7 +30,7 @@ order6 = Order.new(book3,reader1,"11.03.24")
 order7 = Order.new(book3,reader1,"01.03.24")
 order8 = Order.new(book3,reader2,"01.03.24")
 order9 = Order.new(book4,reader2,"01.03.24")
-
+order10 = Order.new(book2,reader2,"01.03.24")
 
 library = Library.new()
 library.add(order1)
@@ -42,6 +42,7 @@ library.add(order6)
 library.add(order7)
 library.add(order8)
 library.add(order9)
+library.add(order10)
 
 library.add(reader1)
 library.add(reader2)
@@ -52,6 +53,7 @@ library.add(book2)
 library.add(book3)
 library.add(book4)
 
+
 library.add(author1)
 library.add(author2)
 library.add(author3)
@@ -59,6 +61,8 @@ library.add(author3)
 puts library.the_best_reader()
 puts
 puts library.the_most_popular_book()
+puts
+puts library.countOfPeopleOnTheBestBook()
 
-library.writeLibraryDataWithYaml(library)
-library.readLibraryDataWithYaml()
+# library.writeLibraryDataWithYaml(library)
+# library.readLibraryDataWithYaml()

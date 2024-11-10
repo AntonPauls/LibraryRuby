@@ -10,18 +10,22 @@ module Statistics
         readers.find{|obj| obj.id == id_best_reader}
     end
 
-    def theMostPopularBook(orders, books)
-        countsBooks = Hash.new(0)
-        orders.each do |element|
-            countsBooks[element.book_id] += 1
-        end
-        idTheMostPopularBook = countsBooks.max_by { |key, value| value }[0]
+    def theMostPopularBook(orders)
+        idTheMostPopularBook = creatHashBooks().max_by { |key, value| value }[0]
         found = books.find{|obj| obj.id == idTheMostPopularBook}
     end
 
     def oneOfTheThirdTheBestBooks(orders)
-        topBooks = 3
-        
+        idTheMostPopularBook = creatHashBooks().max_by { |key, value| value }[0]
+        creatHashBooks()[idTheMostPopularBook]
+    end
+
+    def creatHashBooks()
+        countsBooks = Hash.new(0)
+        orders.each do |element|
+            countsBooks[element.book_id] += 1
+        end
+        countsBooks
     end
 
     def writeLibraryWithYami(library)

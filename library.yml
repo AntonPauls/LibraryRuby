@@ -1,78 +1,83 @@
 --- !ruby/object:Library
 books:
 - !ruby/object:Book
-  id: 1731234134.600887
+  id: 1731234474.2978628
   type: Book
   title: Voina i mir
-  author_id: 1731234134.6008792
+  author_id: 1731234474.2978532
 - !ruby/object:Book
-  id: 1731234134.6008902
+  id: 1731234474.2978663
   type: Book
   title: Svit
-  author_id: 1731234134.6008823
+  author_id: 1731234474.2978573
 - !ruby/object:Book
-  id: 1731234134.6008916
+  id: 1731234474.2978675
   type: Book
   title: Dontes
-  author_id: 1731234134.6008835
+  author_id: 1731234474.2978594
+- !ruby/object:Book
+  id: 1731234474.2978687
+  type: Book
+  title: Dontes i Elena
+  author_id: 1731234474.2978594
 orders:
 - !ruby/object:Order
-  id: 1731234134.6008968
+  id: 1731234474.2978725
   type: Order
-  book_id: 1731234134.600887
-  reader_id: 1731234134.6008735
+  book_id: 1731234474.2978628
+  reader_id: 1731234474.2978454
   date: 21.03.24
 - !ruby/object:Order
-  id: 1731234134.6009002
+  id: 1731234474.2978768
   type: Order
-  book_id: 1731234134.6008902
-  reader_id: 1731234134.6008635
+  book_id: 1731234474.2978663
+  reader_id: 1731234474.2978323
   date: 11.06.24
 - !ruby/object:Order
-  id: 1731234134.6009014
+  id: 1731234474.2978783
   type: Order
-  book_id: 1731234134.600893
-  reader_id: 1731234134.6008756
+  book_id: 1731234474.2978687
+  reader_id: 1731234474.2978475
   date: 06.09.24
 - !ruby/object:Order
-  id: 1731234134.6009026
+  id: 1731234474.2978797
   type: Order
-  book_id: 1731234134.600893
-  reader_id: 1731234134.6008635
+  book_id: 1731234474.2978687
+  reader_id: 1731234474.2978323
   date: 21.03.24
 - !ruby/object:Order
-  id: 1731234134.600904
+  id: 1731234474.2978811
   type: Order
-  book_id: 1731234134.600893
-  reader_id: 1731234134.6008635
+  book_id: 1731234474.2978687
+  reader_id: 1731234474.2978323
   date: 31.03.24
 - !ruby/object:Order
-  id: 1731234134.6009047
+  id: 1731234474.297882
   type: Order
-  book_id: 1731234134.6008916
-  reader_id: 1731234134.6008635
+  book_id: 1731234474.2978675
+  reader_id: 1731234474.2978323
   date: 11.03.24
 - !ruby/object:Order
-  id: 1731234134.600906
+  id: 1731234474.297883
   type: Order
-  book_id: 1731234134.6008916
-  reader_id: 1731234134.6008635
+  book_id: 1731234474.2978675
+  reader_id: 1731234474.2978323
   date: 01.03.24
 - !ruby/object:Order
-  id: 1731234134.6009073
+  id: 1731234474.297885
   type: Order
-  book_id: 1731234134.6008916
-  reader_id: 1731234134.6008735
+  book_id: 1731234474.2978675
+  reader_id: 1731234474.2978454
   date: 01.03.24
 - !ruby/object:Order
-  id: 1731234134.6009083
+  id: 1731234474.297886
   type: Order
-  book_id: 1731234134.600893
-  reader_id: 1731234134.6008735
+  book_id: 1731234474.2978687
+  reader_id: 1731234474.2978454
   date: 01.03.24
 readers:
 - !ruby/object:Reader
-  id: 1731234134.6008635
+  id: 1731234474.2978323
   type: Reader
   name: Anton
   email: email.com
@@ -80,7 +85,7 @@ readers:
   street: Hiaanstrasse
   house: '9'
 - !ruby/object:Reader
-  id: 1731234134.6008735
+  id: 1731234474.2978454
   type: Reader
   name: Ivan
   email: email.com
@@ -88,7 +93,7 @@ readers:
   street: Gogolestrasse
   house: '9'
 - !ruby/object:Reader
-  id: 1731234134.6008756
+  id: 1731234474.2978475
   type: Reader
   name: Maksim
   email: email.com
@@ -97,17 +102,17 @@ readers:
   house: '9'
 authors:
 - !ruby/object:Author
-  id: 1731234134.6008792
+  id: 1731234474.2978532
   type: Author
   name: Tolstoi
   biography: " Ценитель вишего искуства"
 - !ruby/object:Author
-  id: 1731234134.6008823
+  id: 1731234474.2978573
   type: Author
   name: Gogol
   biography: " Убит народом"
 - !ruby/object:Author
-  id: 1731234134.6008835
+  id: 1731234474.2978594
   type: Author
   name: Peshkin
   biography: " Умер в голоде и страхе "
