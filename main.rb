@@ -5,12 +5,14 @@ require_relative "entities/order.rb"
 require_relative "entities/library.rb"
 require_relative "errors/errors_catcher.rb"
 require_relative "module/statistics.rb"
-
+require "pry"
 
 
 reader1 = Reader.new("Anton", "email.com","Plauen","Hiaanstrasse","9")
 reader2 = Reader.new("Ivan", "email.com","Plauen","Gogolestrasse","9")
 reader3 = Reader.new("Maksim", "email.com","Plauen","Langestrasse","9")
+reader4 = Reader.new("Sveta", "email.com","Plauen","Langestrasse","9")
+reader5 = Reader.new("Maksim", "email.com","Plauen","Langestrasse","9")
 
 author1 = Author.new("Tolstoi"," Ценитель вишего искуства")
 author2 = Author.new("Gogol"," Убит народом")
@@ -21,11 +23,11 @@ book2 = Book.new("Svit", author2);
 book3 = Book.new("Dontes", author3);
 book4 = Book.new("Dontes i Elena", author3);
 
-order1 = Order.new(book1,reader2,"21.03.24")
+order1 = Order.new(book1,reader4,"21.03.24")
 order2 = Order.new(book2,reader1,"11.06.24")
 order3 = Order.new(book4,reader3,"06.09.24")
-order4 = Order.new(book4,reader1,"21.03.24")
-order5 = Order.new(book4,reader1,"31.03.24")
+order4 = Order.new(book4,reader5,"21.03.24")
+order5 = Order.new(book4,reader2,"31.03.24")
 order6 = Order.new(book3,reader1,"11.03.24")
 order7 = Order.new(book3,reader1,"01.03.24")
 order8 = Order.new(book3,reader2,"01.03.24")
@@ -58,6 +60,8 @@ library.add(author1)
 library.add(author2)
 library.add(author3)
 
+
+
 puts library.the_best_reader()
 puts
 puts library.the_most_popular_book()
@@ -66,3 +70,4 @@ puts library.countOfPeopleOnTheBestBook()
 
 # library.writeLibraryDataWithYaml(library)
 # library.readLibraryDataWithYaml()
+
