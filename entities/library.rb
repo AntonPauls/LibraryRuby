@@ -1,4 +1,4 @@
-require_relative "../module/tools.rb"
+require_relative "../module/statistics.rb"
 require_relative "../errors/errors_catcher.rb"
 
 class Library
@@ -26,13 +26,19 @@ class Library
         end
     end
 
-    def to_s
-        "#{@orders}"
-    end
-
     def the_best_reader()
         theBestReader(@orders, @readers)
     end
 
+    def the_most_popular_book()
+        theMostPopularBook(@orders, @books)
+    end
 
+    def writeLibraryDataWithYaml(library)
+        writeLibraryWithYami(library)
+    end
+
+    def readLibraryDataWithYaml()
+        readLibrary()
+    end
 end

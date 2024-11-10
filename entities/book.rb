@@ -9,4 +9,8 @@ class Book < BaseEntity
       @title = title
       @author_id = author.id
     end
+
+    def to_s
+       "Book: title: #{@title}, author_id:  #{@author_id}"
+    end
 end

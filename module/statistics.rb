@@ -1,14 +1,42 @@
+require "yaml"
+
 module Statistics 
     def theBestReader(orders, readers)
-        counts = {}
+        counts = Hash.new(0)
         orders.each do |element| 
-            if counts.key? (element.reader_id)
-                counts[element.reader_id] = counts[element.reader_id] + 1
-            else
-                counts[element.reader_id] = 1
-            end
+            counts[element.reader_id] += 1
         end
         id_best_reader = counts.max_by { |key, value| value }[0]
-        found = readers.find{|obj| obj.id == id_best_reader}
-    end 
+        readers.find{|obj| obj.id == id_best_reader}
+    end
+
+    def theMostPopularBook(orders, books)
+        countsBooks = Hash.new(0)
+        orders.each do |element|
+            countsBooks[element.book_id] += 1
+        end
+        idTheMostPopularBook = countsBooks.max_by { |key, value| value }[0]
+        found = books.find{|obj| obj.id == idTheMostPopularBook}
+    end
+
+    def oneOfTheThirdTheBestBooks(orders)
+        topBooks = 3
+        
+    end
+
+    def writeLibraryWithYami(library)
+        File.open("library.yml", "w") do |file|
+            file.write(library.to_yaml)
+          end
+    end
+    
+
+    def readLibrary()
+        library = YAML.load_file("library.yml")
+        puts library.books 
+        puts library.orders 
+        puts library.readers 
+        puts library.authors
+    end
+
 end

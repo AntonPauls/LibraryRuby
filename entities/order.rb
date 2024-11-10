@@ -9,7 +9,9 @@ class Order < BaseEntity
         @reader_id = reader.id
         @date = date
     end
-    def to_s()
-        "Readers_id:#{@reader_id}"
+
+    def to_s
+        "Order: book_id: #{@book_id}, reader_id:  #{@reader_id}, date:  #{@date}"
+   
     end
 end
